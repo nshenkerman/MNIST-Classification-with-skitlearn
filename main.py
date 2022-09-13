@@ -33,9 +33,9 @@ testy = y[1000:]
 
 mlp.fit(trainx,trainy) #trains the neural network
 
-prediction = mlp.predict(testx)#
+prediction = mlp.predict(testx)
 prediction[:50] 
 
 testy[:50] 
 
-accuracy_score(testy, prediction)
+accuracy_score(testy, prediction)#accuracy measure
