@@ -19,7 +19,7 @@ mlp = MLPClassifier(hidden_layer_sizes=(25) , activation='logistic', alpha=1e-4,
 #verbose: prints progress messages
 
 digit = datasets.load_digits()
-x = digit.images.reshape((len(digit.images), -1)) #flattens pixels
+x = digit.images.reshape((len(digit.images), -1)) #flattens pixels; turns a 2D Array into a 1D Array required for neural networks
 y = digit.target
 
 
@@ -31,9 +31,9 @@ trainy = y[:1000]
 testx = x[1000:]
 testy = y[1000:]
 
-mlp.fit(trainx,trainy)
+mlp.fit(trainx,trainy) #trains the neural network
 
-prediction = mlp.predict(testx)
+prediction = mlp.predict(testx)#
 prediction[:50] 
 
 testy[:50] 
